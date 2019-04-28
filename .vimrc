@@ -1,5 +1,5 @@
 set nocompatible
-filetype on
+filetype off
 set nu
 
 set expandtab
@@ -17,7 +17,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
-filetype plugin indent on
+
+filetype plugin indent on " Filetype auto-detection
+syntax on " Syntax highlighting
+
+" German (Neue Rechtschreibung) Spellcheck
+setlocal spell spelllang=de_de
+
 colorscheme badwolf
 
 let &colorcolumn="80,".join(range(120,999),",")
